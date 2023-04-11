@@ -10,6 +10,25 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            ZStack{
+                Text("HALLO")
+                    .padding(64)
+                    .background(Capsule()
+                        .fill(
+                            LinearGradient(gradient: Gradient(colors: [.mint,.pink]),
+                                           startPoint: .top,
+                                           endPoint: .trailing)))
+            }
+            .shadow(color: .mint, radius: 40, x:-5, y:-15)
+            .overlay(Capsule().stroke(Color.indigo, lineWidth: 5))
+            
+            //I created this image for a project
+            Image("HewittEstates&Antiques-02")
+                .resizable()
+                .frame(width: 150, height: 150)
+                .clipShape(Circle())
+                .mask(LinearGradient(gradient: Gradient(colors: [.black, .black, .black, .clear]), startPoint: .bottom, endPoint: .top))
+                .opacity(0.70)
             Capsule()
                 .fill(LinearGradient(gradient: Gradient(colors: [.blue, .green, .pink]), startPoint: .topLeading, endPoint: .bottomTrailing))
             Rectangle()
