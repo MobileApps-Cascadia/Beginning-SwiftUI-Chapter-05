@@ -18,6 +18,23 @@ struct ContentView: View {
                 .fill(AngularGradient(gradient: Gradient(colors: [.green, .blue, .black, .red, .yellow, .gray]), center: .top))
             Rectangle()
                 .fill(AngularGradient(gradient: Gradient(colors: [.green, .blue, .black, .red, .yellow, .gray]), center: .bottom))
+            
+            ZStack{
+                Ellipse()
+                    .fill(RadialGradient(gradient: Gradient(colors: [.red,.teal]),center: .trailing,startRadius: 300,endRadius: 100))
+                Text("Whats up with SwiftUI am I right?")
+                    
+            }
+            HStack{
+                Image("bearsmall")
+                    .resizable()
+                    .frame(width:200, height: 210)
+                    .aspectRatio( contentMode: .fill)
+                    .clipShape(Circle())
+                    .shadow(color: .teal, radius: 46, x: 90, y: -30)
+                    .overlay(Circle().stroke(Color.brown, lineWidth: 10))
+                    .opacity(0.5)
+            }
         }
         .padding()
     }
