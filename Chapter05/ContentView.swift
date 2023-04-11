@@ -12,16 +12,14 @@ struct ContentView: View {
         ZStack {
             VStack{
                 Capsule()
-                                .fill(LinearGradient(gradient: Gradient(colors: [.blue, .green, .pink]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                            Rectangle()
-                                .fill(AngularGradient(gradient: Gradient(colors: [.green, .blue, .black, .red, .yellow, .gray]), center: .center))
-                            Rectangle()
-                                .fill(AngularGradient(gradient: Gradient(colors: [.green, .blue, .black, .red, .yellow, .gray]), center: .top))
-                            Rectangle()
-                                .fill(AngularGradient(gradient: Gradient(colors: [.green, .blue, .black, .red, .yellow, .gray]), center: .bottom))
+                    .fill(LinearGradient(gradient: Gradient(colors: [.blue, .green, .pink]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                Rectangle()
+                    .fill(AngularGradient(gradient: Gradient(colors: [.green, .blue, .black, .red, .yellow, .gray]), center: .center))
+                Rectangle()
+                    .fill(AngularGradient(gradient: Gradient(colors: [.green, .blue, .black, .red, .yellow, .gray]), center: .top))
+                Rectangle()
+                    .fill(AngularGradient(gradient: Gradient(colors: [.green, .blue, .black, .red, .yellow, .gray]), center: .bottom))
             }
-            
-            
             
             RoundedRectangle(cornerRadius: 20)
                 .fill(
@@ -56,6 +54,10 @@ struct ContentView: View {
                         )
                         .shadow(color: .black, radius: 10, x: 0, y: 5)
                         .opacity(0.8)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.green, lineWidth: 8)
+                        )
                 )
             Text("Mountain")
                 .font(.title)
@@ -70,3 +72,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
